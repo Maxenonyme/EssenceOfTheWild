@@ -32,6 +32,8 @@ public class EOTWCreativeModeTabs {
             createNewTab("spawn_egg_tab", "Essence Of The Wild Spawn Eggs", ()-> EOTWItems.SHEEP_SPAWN_EGG.get(), (pParameters, pOutput) -> {
                 pOutput.accept(EOTWItems.SHEEP_SPAWN_EGG.get());
                 pOutput.accept(EOTWItems.PIG_SPAWN_EGG.get());
+                pOutput.accept(EOTWItems.COW_SPAWN_EGG.get());
+                pOutput.accept(EOTWItems.MOOSHROOM_SPAWN_EGG.get());
             });
 
     public static RegistryObject<CreativeModeTab> createNewTab(

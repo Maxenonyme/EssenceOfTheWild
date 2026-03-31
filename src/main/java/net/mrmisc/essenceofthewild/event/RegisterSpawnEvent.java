@@ -29,5 +29,19 @@ public class RegisterSpawnEvent {
                 Animal::checkAnimalSpawnRules,
                 SpawnPlacementRegisterEvent.Operation.REPLACE
         );
+        event.register(
+                EOTWEntities.COW.get(),
+                SpawnPlacements.Type.ON_GROUND,
+                Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+                Animal::checkAnimalSpawnRules,
+                SpawnPlacementRegisterEvent.Operation.REPLACE
+        );
+        event.register(
+                EOTWEntities.MOOSHROOM.get(),
+                SpawnPlacements.Type.ON_GROUND,
+                Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+                Animal::checkAnimalSpawnRules,
+                SpawnPlacementRegisterEvent.Operation.REPLACE
+        );
     }
 }

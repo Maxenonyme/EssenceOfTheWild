@@ -15,6 +15,8 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.mrmisc.essenceofthewild.entity.EOTWEntities;
+import net.mrmisc.essenceofthewild.entity.custom.cow.CowRenderer;
+import net.mrmisc.essenceofthewild.entity.custom.mooshroom.MooshroomRenderer;
 import net.mrmisc.essenceofthewild.entity.custom.pig.PigRenderer;
 import net.mrmisc.essenceofthewild.entity.custom.sheep.SheepRenderer;
 import net.mrmisc.essenceofthewild.util.EOTWUtils;
@@ -57,6 +59,8 @@ public class EssenceOfTheWildMod
         {
             EntityRenderers.register(EOTWEntities.SHEEP.get(), SheepRenderer::new);
             EntityRenderers.register(EOTWEntities.PIG.get(), PigRenderer::new);
+            EntityRenderers.register(EOTWEntities.COW.get(), CowRenderer::new);
+            EntityRenderers.register(EOTWEntities.MOOSHROOM.get(), MooshroomRenderer::new);
         }
     }
 }

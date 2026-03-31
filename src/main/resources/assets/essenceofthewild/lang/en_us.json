@@ -9,5 +9,9 @@
   "item.essenceofthewild.sheep_spawn_egg" : "Sheep Spawn Egg",
   "entity.essenceofthewild.sheep" : "Sheep",
   "item.essenceofthewild.pig_spawn_egg" : "Pig Spawn Egg",
-  "entity.essenceofthewild.pig" : "Pig"
+  "entity.essenceofthewild.pig" : "Pig",
+  "item.essenceofthewild.cow_spawn_egg" : "Cow Spawn Egg",
+  "entity.essenceofthewild.cow" : "Cow",
+  "item.essenceofthewild.mooshroom_spawn_egg" : "Mooshroom Spawn Egg",
+  "entity.essenceofthewild.mooshroom" : "Mooshroom"
 }

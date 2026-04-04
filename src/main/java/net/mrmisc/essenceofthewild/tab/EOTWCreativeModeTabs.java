@@ -9,6 +9,7 @@ import net.minecraft.world.item.Items;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import net.mrmisc.essenceofthewild.EssenceOfTheWildMod;
+import net.mrmisc.essenceofthewild.block.EOTWBlocks;
 import net.mrmisc.essenceofthewild.item.EOTWItems;
 
 import java.util.function.Supplier;
@@ -20,12 +21,15 @@ public class EOTWCreativeModeTabs {
     public static RegistryObject<CreativeModeTab> ITEM_TAB =
             createNewTab("item_tab", "Essence Of The Wild Items", ()-> EOTWItems.VANILLA_ICECREAM.get(), (pParameters, pOutput) -> {
                 pOutput.accept(EOTWItems.CONE.get());
+                pOutput.accept(EOTWItems.SHEEP_CHEESE.get());
+                pOutput.accept(EOTWItems.SHEEP_CHEESE_WEDGE.get());
                 pOutput.accept(EOTWItems.VANILLA_ICECREAM.get());
                 pOutput.accept(EOTWItems.STRAWBERRY_ICECREAM.get());
                 pOutput.accept(EOTWItems.CHOCOLATE_ICECREAM.get());
                 pOutput.accept(EOTWItems.FIRE_RESISTANCE_ICECREAM.get());
                 pOutput.accept(EOTWItems.JUMP_BOOST_ICECREAM.get());
                 pOutput.accept(EOTWItems.SPEED_ICECREAM.get());
+                pOutput.accept(EOTWBlocks.WOODEN_FREEZER.get());
             });
 
     public static RegistryObject<CreativeModeTab> SPAWN_EGG_TAB =

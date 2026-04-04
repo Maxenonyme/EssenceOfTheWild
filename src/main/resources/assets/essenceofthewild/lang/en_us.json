@@ -7,13 +7,18 @@
   "item.essenceofthewild.speed_icecream" : "Speed Ice Cream",
   "item.essenceofthewild.cone" : "Cone",
   "item.essenceofthewild.sheep_spawn_egg" : "Sheep Spawn Egg",
-  "entity.essenceofthewild.sheep" : "Sheep",
   "item.essenceofthewild.pig_spawn_egg" : "Pig Spawn Egg",
-  "entity.essenceofthewild.pig" : "Pig",
   "item.essenceofthewild.cow_spawn_egg" : "Cow Spawn Egg",
-  "entity.essenceofthewild.cow" : "Cow",
   "item.essenceofthewild.chicken_spawn_egg" : "Chicken Spawn Egg",
-  "entity.essenceofthewild.chicken" : "Chicken",
+  "item.essenceofthewild.sheep_cheese" : "Sheep Cheese",
+  "item.essenceofthewild.sheep_cheese_wedge" : "Sheep Cheese Wedge",
+
   "item.essenceofthewild.mooshroom_spawn_egg" : "Mooshroom Spawn Egg",
-  "entity.essenceofthewild.mooshroom" : "Mooshroom"
+  "entity.essenceofthewild.sheep" : "Sheep",
+  "entity.essenceofthewild.pig" : "Pig",
+  "entity.essenceofthewild.cow" : "Cow",
+  "entity.essenceofthewild.chicken" : "Chicken",
+  "entity.essenceofthewild.mooshroom" : "Mooshroom",
+
+  "block.essenceofthewild.wooden_freezer" : "Wooden Freezer"
 }

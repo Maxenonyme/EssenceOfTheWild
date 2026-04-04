@@ -1,7 +1,4 @@
-package net.mrmisc.essenceofthewild.entity.custom.sheep;// Made with Blockbench 5.1.1
-// Exported for Minecraft version 1.17 or later with Mojang mappings
-// Paste this class into your mod and generate all required imports
-
+package net.mrmisc.essenceofthewild.entity.custom.sheep;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
@@ -15,6 +12,7 @@ import net.mrmisc.essenceofthewild.EssenceOfTheWildMod;
 import net.minecraft.client.model.HierarchicalModel;
 
 public class WoolModel extends HierarchicalModel<SheepEntity> {
+	// This layer location should be baked with EntityRendererProvider.Context in the entity renderer and passed into this model's constructor
 	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(EssenceOfTheWildMod.MOD_ID, "wool"), "main");
 	private final ModelPart bone;
 	private final ModelPart leg1;
@@ -50,7 +48,8 @@ public class WoolModel extends HierarchicalModel<SheepEntity> {
 
 		PartDefinition body = bone.addOrReplaceChild("body", CubeListBuilder.create().texOffs(0, 79).addBox(-4.5F, -3.0F, -9.5F, 9.0F, 11.0F, 17.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, -19.0F, 2.0F));
 
-		PartDefinition head = body.addOrReplaceChild("head", CubeListBuilder.create().texOffs(0, 113).addBox(-3.0F, -5.5F, -5.5F, 6.0F, 3.0F, 6.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 1.0F, -8.0F));
+		PartDefinition head = body.addOrReplaceChild("head", CubeListBuilder.create().texOffs(0, 113).addBox(-3.0F, -5.5F, -5.5F, 6.0F, 3.0F, 6.0F, new CubeDeformation(0.0F))
+		.texOffs(0, 55).addBox(-2.5F, -4.0F, -5.0F, 5.0F, 4.0F, 5.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 1.0F, -8.0F));
 
 		return LayerDefinition.create(meshdefinition, 128, 128);
 	}
@@ -66,7 +65,7 @@ public class WoolModel extends HierarchicalModel<SheepEntity> {
 	}
 
 	@Override
-	public void setupAnim(SheepEntity sheep, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+	public void setupAnim(SheepEntity sheep, float limbSwing, float limbSwingAmount, float ageInTicks, float pNetHeadYaw, float pHeadPitch) {
 		this.root().getAllParts().forEach(ModelPart::resetPose);
 
 		if (sheep.isEating()) {

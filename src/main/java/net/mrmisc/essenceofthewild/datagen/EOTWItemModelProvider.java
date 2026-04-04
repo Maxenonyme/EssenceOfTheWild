@@ -14,6 +14,8 @@ public class EOTWItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         basicItem(EOTWItems.CONE.get());
+        basicItem(EOTWItems.SHEEP_CHEESE.get());
+        basicItem(EOTWItems.SHEEP_CHEESE_WEDGE.get());
         basicItem(EOTWItems.VANILLA_ICECREAM.get());
         basicItem(EOTWItems.STRAWBERRY_ICECREAM.get());
         basicItem(EOTWItems.CHOCOLATE_ICECREAM.get());

@@ -20,6 +20,10 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class CowEntity extends Cow {
+
+    public final AnimationState idleAnimationState = new AnimationState();
+    private int idleAnimationTimeout = 0;
+
     public CowEntity(EntityType<? extends Cow> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
     }
@@ -69,6 +73,24 @@ public class CowEntity extends Cow {
             this.setVariant(pickVariant(pLevel.getLevel(), this.blockPosition()));
         }
         return super.finalizeSpawn(pLevel, pDifficulty, pReason, pSpawnData, pDataTag);
+    }
+
+    @Override
+    public void tick() {
+        super.tick();
+
+        if(this.level().isClientSide()) {
+            setupAnimationStates();
+        }
+    }
+
+    private void setupAnimationStates() {
+        if (this.idleAnimationTimeout <= 0) {
+            this.idleAnimationTimeout = this.random.nextInt(40) + 80;
+            this.idleAnimationState.startIfStopped(this.tickCount);
+        } else {
+            --this.idleAnimationTimeout;
+        }
     }
 
     private void setVariantById(String id) {

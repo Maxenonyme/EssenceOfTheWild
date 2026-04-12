@@ -1,3 +1,6 @@
 {
-  "parent": "essenceofthewild:block/wooden_freezer"
+  "parent": "minecraft:item/generated",
+  "textures" : {
+    "layer0" : "essenceofthewild:item/wooden_freezer"
+  }
 }

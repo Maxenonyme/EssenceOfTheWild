@@ -4,9 +4,9 @@ import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.resources.ResourceLocation;
 
-public class CowRenderer extends MobRenderer<CowEntity, CowModel<CowEntity>> {
+public class CowRenderer extends MobRenderer<CowEntity, CowModel> {
     public CowRenderer(EntityRendererProvider.Context pContext) {
-        super(pContext, new CowModel<>(pContext.bakeLayer(CowModel.LAYER_LOCATION)), 0.8f);
+        super(pContext, new CowModel(pContext.bakeLayer(CowModel.LAYER_LOCATION)), 0.8f);
     }
 
     @Override
